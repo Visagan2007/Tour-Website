@@ -1,0 +1,210 @@
+/* Forest canopy display + handwritten trail-notes + clean stat labels */
+@import '@fontsource/rubik-dirt';
+@import '@fontsource/kalam';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/700.css';
+
+:root {
+    --dusk-sky: #1B2438;
+    --gold: #F2B84B;
+    --ember: #E8792E;
+    --rust: #B94A24;
+    --parchment: #FDF6E8;
+    --ink: #17120A;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.AB1 {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--dusk-sky);
+    background-image: url('/src/Assets/AboutUsImg1.webp');
+    background-repeat: no-repeat;
+    background-size: 1707px 945px;
+    z-index: -1;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.AB1B1 {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image:
+        radial-gradient(ellipse at center, transparent 0%, transparent 45%, rgba(23, 18, 10, 0.75) 85%, var(--ink) 100%),
+        radial-gradient(ellipse at 50% 55%, rgba(242, 184, 75, 0.14), transparent 60%);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+    animation: FadeIn 1200ms ease forwards;
+}
+
+.AB2 {
+    width: 100%;
+    min-height: 2000px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.color {
+    color: var(--parchment);
+    opacity: 0;
+    animation: fadeInDown 1000ms ease forwards;
+}
+
+.AT1 {
+    font-size: 110px;
+    font-family: 'Rubik Dirt', system-ui;
+    opacity: 0;
+    font-weight: bold;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--parchment) 0%, var(--gold) 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 34px rgba(0, 0, 0, 0.55);
+}
+
+.ATP1 {
+    font-family: 'Kalam', cursive;
+    width: 1200px;
+    font-size: 30px;
+    opacity: 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.AT2 {
+    font-size: 110px;
+    font-family: 'Rubik Dirt', system-ui;
+    margin-top: 300px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 10px 34px rgba(0, 0, 0, 0.55);
+}
+
+.ATP2 {
+    font-size: 30px;
+    font-family: 'Kalam', cursive;
+    width: 1400px;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+.AB2B1 {
+    margin-top: 200px;
+    border: 1px solid rgba(242, 184, 75, 0.5);
+    height: 150px;
+    width: 900px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* background: linear-gradient(180deg, rgba(27, 36, 56, 0.395), rgba(23, 18, 10, 0.555)); */
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(6px);
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.color:nth-child(1) {
+    animation-delay: 200ms;
+}
+.color:nth-child(2) {
+    animation-delay: 600ms;
+}
+.color:nth-child(3) {
+    animation-delay: 200ms;
+}
+.color:nth-child(4) {
+    animation-delay:600ms;
+}
+.color:nth-child(5) {
+    animation-delay: 700ms;
+}
+
+.AB2B1PHCC {
+    height: 150px;
+    width: 225px;
+    border-right: 1px solid rgba(242, 184, 75, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 8px;
+    transition: background 300ms ease, transform 300ms ease;
+}
+
+.AB2B1PHCC:last-child {
+    border-right: none;
+}
+
+.AB2B1PHCC:hover {
+    background: rgba(242, 184, 75, 0.08);
+    transform: translateY(-4px);
+}
+
+.AB2B1PHCC h3 {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    text-align: center;
+    color: var(--parchment);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    opacity: 0.8;
+}
+
+.AB2B1PH1 {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.AB2B1PH4 {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.AB2B1PH1T1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(180deg, var(--gold), var(--rust));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.AB2B1PHNM {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
