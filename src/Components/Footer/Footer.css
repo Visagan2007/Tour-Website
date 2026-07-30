@@ -51,20 +51,3 @@ footer .copy {
     font-size: 0.8rem;
     color: rgba(251, 243, 228, 0.5);
 }
-
-@media(max-width:900px) {
-
-    .why-grid,
-    .trip-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-
-    .topbar {
-        flex-direction: column;
-        gap: 14px;
-    }
-}

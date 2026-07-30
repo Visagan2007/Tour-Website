@@ -66,11 +66,11 @@ body {
     background: radial-gradient(circle, #FFE8B0 0%, #F3B15E 60%, rgba(243, 177, 94, 0) 75%);
     border-radius: 50%;
     opacity: 0;
-    animation: HFadeIn 3s linear forwards;
+    animation: FadeIn 3s linear forwards;
     transition: 200ms ;
 }
 
-@keyframes HFadeIn {
+/* @keyframes HFadeIn {
     0%{
         background: radial-gradient(circle, transparent 0%, transparent 60%, transparent 75%);
         opacity: 0.25;
@@ -87,7 +87,7 @@ body {
         background: radial-gradient(circle, #FFE8B0 0%, #F3B15E 60%, rgba(243, 177, 94, 0) 75%);
         opacity: 1;
     }
-}
+} */
 
 .leaf {
     position: absolute;
