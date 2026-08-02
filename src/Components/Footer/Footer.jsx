@@ -2,7 +2,7 @@ import './Footer.css';
 function Footer() {
     return (
         <>
-            <footer>
+            <div className='footer'>
                 <div className="logo-line">Thendral Tours</div>
                 <div className="tag">carrying you somewhere new</div>
                 <div className="social-row">
@@ -15,7 +15,7 @@ function Footer() {
                     <a href="#"><i className="bi bi-discord" id='CBB7'></i></a>
                 </div>
                 <div className="copy">© 2026 Thendral Tours. All rights reserved.</div>
-            </footer>
+            </div>
         </>
     )
 }

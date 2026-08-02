@@ -1,18 +1,3 @@
-/* Forest canopy display + handwritten trail-notes + clean stat labels */
-@import '@fontsource/rubik-dirt';
-@import '@fontsource/kalam';
-@import '@fontsource/poppins/400.css';
-@import '@fontsource/poppins/700.css';
-
-:root {
-    --dusk-sky: #1B2438;
-    --gold: #F2B84B;
-    --ember: #E8792E;
-    --rust: #B94A24;
-    --parchment: #FDF6E8;
-    --ink: #17120A;
-}
-
 *{
     box-sizing: border-box;
 }
@@ -22,10 +7,10 @@
     top: 0;
     height: 100vh;
     width: 100%;
-    background-color: var(--dusk-sky);
+    background-color: #1B2438;
     background-image: url('/src/Assets/AboutUsImg1.webp');
     background-repeat: no-repeat;
-    background-size: 1707px 945px;
+    background-size: cover;
     z-index: -1;
 }
 
@@ -45,7 +30,7 @@
     height: 100vh;
     width: 100%;
     background-image:
-        radial-gradient(ellipse at center, transparent 0%, transparent 45%, rgba(23, 18, 10, 0.75) 85%, var(--ink) 100%),
+        radial-gradient(ellipse at center, transparent 0%, transparent 45%, rgba(23, 18, 10, 0.75) 85%, #17120A 100%),
         radial-gradient(ellipse at 50% 55%, rgba(242, 184, 75, 0.14), transparent 60%);
     backdrop-filter: blur(2px);
     z-index: -1;
@@ -62,7 +47,7 @@
 }
 
 .color {
-    color: var(--parchment);
+    color: #FDF6E8;
     opacity: 0;
     animation: fadeInDown 1000ms ease forwards;
 }
@@ -75,10 +60,7 @@
     margin-top: 50px;
     letter-spacing: 2px;
     text-align: center;
-    background: linear-gradient(180deg, var(--parchment) 0%, var(--gold) 130%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
     text-shadow: 0 10px 34px rgba(0, 0, 0, 0.55);
 }
 
@@ -97,6 +79,8 @@
     margin-top: 300px;
     font-weight: bold;
     letter-spacing: 2px;
+    text-align: center;
+    color: white;
     text-shadow: 0 10px 34px rgba(0, 0, 0, 0.55);
 }
 
@@ -178,11 +162,10 @@
     margin: 4px 0 0 0;
     font-size: 13px;
     text-align: center;
-    color: var(--parchment);
+    color: rgba(253, 246, 232, 0.8);
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    opacity: 0.8;
 }
 
 .AB2B1PH1 {
@@ -198,7 +181,7 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    background: linear-gradient(180deg, var(--gold), var(--rust));
+    background: linear-gradient(180deg, #F2B84B, #B94A24);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

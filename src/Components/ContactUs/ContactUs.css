@@ -2,12 +2,19 @@
     box-sizing: border-box;
 }
 
+.CPage {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 .COuterBox {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url('/src/Assets/AboutUsImg1.webp');
     background-repeat: no-repeat;
-    background-size: 1707px 945px;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +37,7 @@
 }
 
 .CScrool {
-    height: 823px;
+    height: 853px;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -164,21 +171,12 @@
 }
 
 .CI1:focus {
-    border-color: #0F6E56;
+    border-color: #1F4E44;
     font-size: 17px;
 }
 
 .CAB1:focus {
     border-color: #0F6E56;
-}
-
-.CI1:hover {
-    font-size: 17px;
-}
-
-.CI1:focus {
-    border-color: #1F4E44;
-    font-size: 17px;
 }
 
 

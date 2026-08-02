@@ -2,32 +2,36 @@
     box-sizing: border-box;
 }
 
-footer {
+.footer {
+    width: 100%;
     background: #26332C;
     color: #FBF3E4;
-    padding: 50px 40px 30px;
+    padding: 15px 40px 10px;
     text-align: center;
 }
 
-footer .logo-line {
+.footer .logo-line {
     font-family: 'Baloo 2';
     font-size: 1.3rem;
     color: #C9A55C;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
-footer .tag {
+.footer .tag {
     font-family: 'Kalam';
     color: #F5EAD4;
     font-size: 1rem;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .social-row {
     display: flex;
     justify-content: center;
+    height: 50px;
+    width: 400px;
     gap: 14px;
-    margin-bottom: 24px;
+    margin: 0 auto;
+    margin-bottom: 5px;
     flex-wrap: wrap;
 }
 
@@ -47,7 +51,7 @@ footer .tag {
     background: #BD7C4B;
 }
 
-footer .copy {
+.footer .copy {
     font-size: 0.8rem;
     color: rgba(251, 243, 228, 0.5);
 }

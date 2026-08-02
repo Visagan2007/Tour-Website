@@ -1,9 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
 .TOuterBox {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: url('/src/Assets/AboutUsImg1.webp');
     background-repeat: no-repeat;
-    background-size: 1707px 945px;
+    background-size: cover;
     position: fixed;
     top: 0;
     z-index: -1;
@@ -140,7 +144,7 @@
     transition: 200ms;
 }
 
-#ani{
+.ani{
     font-weight: bolder;
     animation: gloom 1s ease;
     animation-iteration-count: infinite;

@@ -1,28 +1,28 @@
 import './ContactUs.css';
 function ContactUs() {
     return (
-        <>
+        <div className='CPage'>
             <div className='COuterBox'><div className='CBlur'></div></div>
             <div className="CScrool">
-                <div className='CB1'>
+                <form className='CB1' onSubmit={(e) => e.preventDefault()}>
                     <div className='CBS1'>
                         <h1 className='CH1'><i className="bi bi-person-fill"></i> Enquire now</h1>
                     </div>
 
-                    <label className='CT1'>Name</label>
-                    <input type="text" className='CI1' placeholder='Enter your name' />
+                    <label className='CT1' htmlFor='c-name'>Name</label>
+                    <input type="text" id='c-name' name='name' className='CI1' placeholder='Enter your name' />
 
-                    <label className='CT1'>Phone</label>
-                    <input type="number" className='CI1' placeholder='Enter your phone no' />
+                    <label className='CT1' htmlFor='c-phone'>Phone</label>
+                    <input type="tel" id='c-phone' name='phone' className='CI1' placeholder='Enter your phone no' />
 
-                    <label className='CT1'>Email</label>
-                    <input type="email" className='CI1' placeholder='Enter your email' />
+                    <label className='CT1' htmlFor='c-email'>Email</label>
+                    <input type="email" id='c-email' name='email' className='CI1' placeholder='Enter your email' />
 
-                    <label className='CT1'>Info</label>
-                    <textarea className='CAB1'></textarea>
+                    <label className='CT1' htmlFor='c-info'>Info</label>
+                    <textarea id='c-info' name='info' className='CAB1'></textarea>
 
                     <button type='submit' className='CSB1'>Submit</button>
-                </div>
+                </form>
 
                 <div className='CB2'>
                     <a href='https://web.whatsapp.com/' className='social-icon'>
@@ -48,7 +48,7 @@ function ContactUs() {
                     </a>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default ContactUs;
