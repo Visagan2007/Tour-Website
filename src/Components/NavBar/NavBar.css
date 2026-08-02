@@ -14,7 +14,7 @@
     border-bottom: 3px solid #969c9e;
     border-right: 3px solid #969c9e;
     position: absolute;
-    width: 190px;
+    width: 165px;
     top: 18px;
     left: 40px;
     z-index: 20;
@@ -27,10 +27,13 @@
 
 .logo .word {
     font-family: 'Baloo 2';
+    position: absolute;
+    left: 63px;
     font-weight: 700;
     font-size: 1.3rem;
     color: #2E6F62;
     line-height: 1;
+    cursor: default;
 }
 
 .logo .word span {
@@ -119,6 +122,12 @@
 
 .Comp:hover::after {
     width: 55%;
+}
+
+.Comp:active {
+    background: linear-gradient(135deg, #3b8475, #316760);
+    color: white;
+    transform: translateY(2.5px);
 }
 
 .Comp.active {

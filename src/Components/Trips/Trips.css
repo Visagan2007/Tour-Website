@@ -261,6 +261,7 @@
     color: #fff;
     font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
     border: none;
     transition: background 300ms ease;
 }

@@ -30,7 +30,7 @@ function Trips() {
                             <span className="card-tag">Nature</span>
                             <span className="card-tag">Honeymooners</span>
                         </div>
-                        <p className="card-route-row TCR1"><i className="bi bi-signpost-2"></i>Kochi→Alleppey→Kumarakom→Kochi</p>
+                        <p className="card-route-row TCR1"><i className="bi bi-signpost-2"></i>Kochi → Alleppey → Kumarakom → Kochi</p>
                         <div className="card-stats">
                             <div className="card-stat TCD1">
                                 <p className="card-stat-label">Duration</p>
@@ -62,7 +62,7 @@ function Trips() {
                             <span className="card-tag">Architecture</span>
                             <span className="card-tag">Pilgrimage</span>
                         </div>
-                        <p className="card-route-row TCR2"><i className="bi bi-signpost-2"></i>Chennai→Madurai→Thanjavur→Chennai</p>
+                        <p className="card-route-row TCR2"><i className="bi bi-signpost-2"></i>Chennai → Madurai → Thanjavur → Chennai</p>
                         <div className="card-stats">
                             <div className="card-stat TCD2">
                                 <p className="card-stat-label">Duration</p>
@@ -94,7 +94,7 @@ function Trips() {
                             <span className="card-tag">Nature</span>
                             <span className="card-tag">Coffee Trails</span>
                         </div>
-                        <p className="card-route-row TCR3"><i className="bi bi-signpost-2"></i>Bengaluru→Mysuru→Coorg→Bengaluru</p>
+                        <p className="card-route-row TCR3"><i className="bi bi-signpost-2"></i>Bengaluru → Mysuru → Coorg → Bengaluru</p>
                         <div className="card-stats">
                             <div className="card-stat TCD3">
                                 <p className="card-stat-label">Duration</p>
@@ -125,7 +125,7 @@ function Trips() {
                             <span className="card-tag">History</span>
                             <span className="card-tag">Architecture</span>
                         </div>
-                        <p className="card-route-row TCR4"><i className="bi bi-signpost-2"></i>Mumbai→Aurangabad→Mumbai</p>
+                        <p className="card-route-row TCR4"><i className="bi bi-signpost-2"></i>Mumbai → Aurangabad → Mumbai</p>
                         <div className="card-stats">
                             <div className="card-stat TCD4">
                                 <p className="card-stat-label">Duration</p>
@@ -159,7 +159,7 @@ function Trips() {
                             <span className="card-tag">Heritage</span>
                         </div>
                         <p className="card-route-row TCR5">
-                            <i className="bi bi-signpost-2"></i>Udaipur→Jodhpur→Jaipur
+                            <i className="bi bi-signpost-2"></i>Udaipur → Jodhpur → Jaipur
                         </p>
                         <div className="card-stats">
                             <div className="card-stat TCD5">
@@ -194,7 +194,7 @@ function Trips() {
                             <span className="card-tag">First Visit</span>
                         </div>
                         <p className="card-route-row TCR6">
-                            <i className="bi bi-signpost-2"></i>Delhi→Agra→Delhi
+                            <i className="bi bi-signpost-2"></i>Delhi → Agra → Delhi
                         </p>
                         <div className="card-stats">
                             <div className="card-stat TCD6">
@@ -229,7 +229,7 @@ function Trips() {
                             <span className="card-tag">Scenic</span>
                         </div>
                         <p className="card-route-row TCR7">
-                            <i className="bi bi-signpost-2"></i>Srinagar→Gulmarg→Pahalgam→Srinagar
+                            <i className="bi bi-signpost-2"></i>Srinagar → Gulmarg → Pahalgam → Srinagar
                         </p>
                         <div className="card-stats">
                             <div className="card-stat TCD7">
