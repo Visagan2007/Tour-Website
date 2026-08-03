@@ -1,5 +1,8 @@
 import './Home.css';
 import { NavLink } from 'react-router-dom';
+import { TbMessagesFilled } from "react-icons/tb";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { FaHandHoldingHeart } from "react-icons/fa";
 
 function Home() {
     return (
@@ -31,17 +34,17 @@ function Home() {
                 </div>
                 <div className="why-grid">
                     <div className="why-card">
-                        <i className="fa-solid fa-comments"></i>
+                        <i><TbMessagesFilled /></i>
                         <h3>Real Conversations First</h3>
                         <p>Every itinerary starts with a chat about what you actually want — not a fixed package.</p>
                     </div>
                     <div className="why-card">
-                        <i className="fa-solid fa-map-location-dot"></i>
+                        <i><FaMapLocationDot /></i>
                         <h3>Local Roots, Real Knowledge</h3>
                         <p>From hidden gems to iconic landmarks, we've walked the ground we send you to.</p>
                     </div>
                     <div className="why-card">
-                        <i className="fa-solid fa-hand-holding-heart"></i>
+                        <i><FaHandHoldingHeart /></i>
                         <h3>Details, Handled</h3>
                         <p>Stays, transport, and backup plans sorted — you focus on the experience, not logistics.</p>
                     </div>
@@ -83,7 +86,7 @@ function Home() {
             </div>
 
             <div className="testimonial">
-                <i className="fa-solid fa-quote-left quote-mark"></i>
+                <i className="bi bi-quote quote-mark"></i>
                 <p>"Thendral didn't just book our trip — they listened first. Every stop felt like it was made for us."</p>
                 <div className="who">Priya & Arjun <span>— Coorg trip</span></div>
             </div>

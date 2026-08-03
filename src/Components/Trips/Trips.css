@@ -74,7 +74,7 @@
 }
 
 .TScrool {
-    height: 2420px;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -89,7 +89,8 @@
 .card {
     z-index: 1;
     height: 675px;
-    width: 415px;
+    width: 100%;
+    max-width: 415px;
     border: 1px solid;
     box-sizing: border-box;
     border-radius: 16px;
