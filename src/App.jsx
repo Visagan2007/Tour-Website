@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Components/Home/Home';
 // Preserve the original global stylesheet order while splitting page JavaScript.

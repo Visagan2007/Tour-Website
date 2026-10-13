@@ -260,17 +260,29 @@ body {
 }
 
 .trip-img2 {
-    background-image: url(../../Assets/images2.webp);
+    background-image: url(../../Assets/images2-480.webp);
+    background-image: image-set(url(../../Assets/images2-480.webp) 1x, url(../../Assets/images2.webp) 2x);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .trip-img3 {
-    background-image: url(../../Assets/images3.webp);
+    background-image: url(../../Assets/images3-480.webp);
+    background-image: image-set(url(../../Assets/images3-480.webp) 1x, url(../../Assets/images3.webp) 2x);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@media (max-width: 800px) {
+    .trip-img2 {
+        background-image: image-set(url(../../Assets/images2-240.webp) 1x, url(../../Assets/images2-480.webp) 2x, url(../../Assets/images2.webp) 3x);
+    }
+
+    .trip-img3 {
+        background-image: image-set(url(../../Assets/images3-240.webp) 1x, url(../../Assets/images3-480.webp) 2x, url(../../Assets/images3.webp) 3x);
+    }
 }
 
 .trip-tag {

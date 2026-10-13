@@ -1,11 +1,22 @@
 import './Trips.css';
 import img1 from '../../Assets/images1.jpg';
-import img2 from '../../Assets/images2.webp';
-import img3 from '../../Assets/images3.webp';
-import img4 from '../../Assets/images4.webp';
-import img5 from '../../Assets/images5.webp';
-import img6 from '../../Assets/images6.webp';
-import img7 from '../../Assets/images7.webp';
+import img2 from '../../Assets/images2-480.webp';
+import img2Full from '../../Assets/images2.webp';
+import img3 from '../../Assets/images3-480.webp';
+import img3Full from '../../Assets/images3.webp';
+import img4 from '../../Assets/images4-480.webp';
+import img4Large from '../../Assets/images4-960.webp';
+import img4Full from '../../Assets/images4.webp';
+import img5 from '../../Assets/images5-480.webp';
+import img5Full from '../../Assets/images5.webp';
+import img6 from '../../Assets/images6-480.webp';
+import img6Large from '../../Assets/images6-960.webp';
+import img6Full from '../../Assets/images6.webp';
+import img7 from '../../Assets/images7-480.webp';
+import img7Large from '../../Assets/images7-960.webp';
+import img7Full from '../../Assets/images7.webp';
+
+const imageSizes = '(max-width: 455px) calc(100vw - 42px), 413px';
 
 function Trips() {
     return (
@@ -15,7 +26,7 @@ function Trips() {
 
                 {/* Card 1 */}
                 <div className="card card1">
-                    <div className="card-img-wrap"><img src={img1} className="card-img TImg1" alt="Kerala" /></div>
+                    <div className="card-img-wrap"><img src={img1} width="275" height="183" fetchPriority="high" decoding="async" className="card-img TImg1" alt="Kerala" /></div>
                     <div className="card-body C1">
                         <span className="card-badge TCL1"><i className="bi bi-geo-alt-fill ani"></i>Kerala</span>
                         <h1 className="card-title TCT1">Kerala Backwater Escape</h1>
@@ -47,7 +58,7 @@ function Trips() {
 
                 {/* Card 2 */}
                 <div className="card card2">
-                    <div className="card-img-wrap"><img src={img2} className="card-img TImg2" alt="Tamil Nadu" /></div>
+                    <div className="card-img-wrap"><img src={img2} srcSet={`${img2} 480w, ${img2Full} 1024w`} sizes={imageSizes} width="1024" height="684" decoding="async" className="card-img TImg2" alt="Tamil Nadu" /></div>
                     <div className="card-body C2">
                         <span className="card-badge TCL2"><i className="bi bi-geo-alt-fill ani"></i>Tamil Nadu</span>
                         <h1 className="card-title TCT2">Tamil Nadu Temple Trail</h1>
@@ -79,7 +90,7 @@ function Trips() {
 
                 {/* Card 3 */}
                 <div className="card card3">
-                    <div className="card-img-wrap"><img src={img3} className="card-img TImg3" alt="Karnataka" /></div>
+                    <div className="card-img-wrap"><img src={img3} srcSet={`${img3} 480w, ${img3Full} 1024w`} sizes={imageSizes} width="1024" height="682" decoding="async" className="card-img TImg3" alt="Karnataka" /></div>
                     <div className="card-body C3">
                         <span className="card-badge TCL3"><i className="bi bi-geo-alt-fill ani"></i>Karnataka</span>
                         <h1 className="card-title TCT3">Karnataka Heritage & Hills</h1>
@@ -111,7 +122,7 @@ function Trips() {
 
                 {/* Card 4 */}
                 <div className="card card4">
-                    <div className="card-img-wrap"><img src={img4} className="card-img TImg4" alt="Maharashtra" /></div>
+                    <div className="card-img-wrap"><img src={img4} srcSet={`${img4} 480w, ${img4Large} 960w, ${img4Full} 1100w`} sizes={imageSizes} width="1100" height="733" decoding="async" className="card-img TImg4" alt="Maharashtra" /></div>
                     <div className="card-body C4">
                         <span className="card-badge TCL4"><i className="bi bi-geo-alt-fill ani"></i>Maharashtra</span>
                         <h1 className="card-title TCT4">Caves & Coast</h1>
@@ -142,7 +153,7 @@ function Trips() {
 
                 {/* Card 5 */}
                 <div className="card card5">
-                    <div className="card-img-wrap"><img src={img5} className="card-img TImg5" alt="Rajasthan" /></div>
+                    <div className="card-img-wrap"><img src={img5} srcSet={`${img5} 480w, ${img5Full} 1008w`} sizes={imageSizes} width="1008" height="566" loading="lazy" decoding="async" className="card-img TImg5" alt="Rajasthan" /></div>
                     <div className="card-body C5">
                         <span className="card-badge TCL5">
                             <i className="bi bi-geo-alt-fill ani"></i>Rajasthan
@@ -177,7 +188,7 @@ function Trips() {
 
                 {/* Card 6 */}
                 <div className="card card6">
-                    <div className="card-img-wrap"><img src={img6} className="card-img TImg6" alt="Delhi Agra" /></div>
+                    <div className="card-img-wrap"><img src={img6} srcSet={`${img6} 480w, ${img6Large} 960w, ${img6Full} 1250w`} sizes={imageSizes} width="1250" height="625" loading="lazy" decoding="async" className="card-img TImg6" alt="Delhi Agra" /></div>
                     <div className="card-body C6">
                         <span className="card-badge TCL6">
                             <i className="bi bi-geo-alt-fill ani"></i>Delhi / Uttar Pradesh
@@ -212,7 +223,7 @@ function Trips() {
 
                 {/* Card 7 */}
                 <div className="card card7">
-                    <div className="card-img-wrap"><img src={img7} className="card-img TImg7" alt="Kashmir" /></div>
+                    <div className="card-img-wrap"><img src={img7} srcSet={`${img7} 480w, ${img7Large} 960w, ${img7Full} 1920w`} sizes={imageSizes} width="1920" height="935" loading="lazy" decoding="async" className="card-img TImg7" alt="Kashmir" /></div>
                     <div className="card-body C7">
                         <span className="card-badge TCL7">
                             <i className="bi bi-geo-alt-fill ani"></i>Jammu & Kashmir

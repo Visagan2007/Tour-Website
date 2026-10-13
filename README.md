@@ -4,7 +4,7 @@ A static travel website built with Vite and React. It presents Thendral Tours, s
 
 ## Requirements and setup
 
-- Node.js 20.19 or later in the 20.x release, or Node.js 22.12 or later.
+- Node.js 22.22.0 or later.
 - npm, included with Node.js.
 - Google Chrome to run the browser tests.
 
@@ -45,7 +45,9 @@ src/
   main.jsx                 React entry point
   index.css                Global styles and CSS reset
   fonts.css                Self-hosted font definitions
+  icons.css                Generated Bootstrap icon styles
   Assets/                  Trip photographs, backdrop, and brand images
+    fonts/                 Generated font subsets and upstream licenses
   Components/
     Home/                  Homepage and its styles
     Trips/                 Seven trip cards and their styles
@@ -54,13 +56,14 @@ src/
     NavBar/                Logo and route links
     Footer/                Brand, tagline, social links, and copyright
 public/                    Public assets and crawler instructions
+scripts/optimize-fonts.py   Regenerate and verify font and icon subsets
 tests/site.spec.js         Browser regression tests
 playwright.config.js       Production-preview browser test configuration
 vite.config.js             Vite and React plugin configuration
 vercel.json                Static hosting, SPA fallback, and caching
 ```
 
-React Router handles navigation in the browser. Secondary pages load in separate chunks. Fonts and icons are served locally; font families, weights, animations, colors, content, photographs, and interactions follow the original website. Image compression reduces downloads while retaining the original photographs and crop styling.
+React Router 8 handles navigation in the browser through the `react-router` package. Secondary pages load in separate chunks. Fonts and icons are served locally; font families, weights, animations, colors, content, photographs, and interactions follow the original website. Responsive WebP versions let the browser request a suitable image size while retaining the original photographs and crop styling. Lower trip images load lazily, and image decoding is asynchronous.
 
 ## Editing content
 
@@ -71,6 +74,22 @@ React Router handles navigation in the browser. Secondary pages load in separate
 - Edit social destinations in both ContactUs and Footer when actual business account URLs are available.
 - Each component's CSS file controls its appearance. Shared styles are in `src/index.css` and `src/App.css`.
 - Keep image imports and CSS background URLs in sync with files in `src/Assets/`.
+
+## Maintaining optimized assets
+
+Generated font and icon assets are included in the project. Normal development and production builds need only Node.js and npm; Python is optional and is used only to regenerate those assets.
+
+After adding a Bootstrap icon, changing the logo text or About Us display headings, or updating the Fontsource or Bootstrap Icons dependencies, run:
+
+```sh
+npm ci
+python -m pip install "fonttools[woff]"
+python scripts/optimize-fonts.py
+```
+
+The script reads the installed dependencies and component text, regenerates `src/icons.css` and `src/Assets/fonts/`, and copies the upstream licenses. It verifies that each retained glyph has the same outline and advance width as the source font, including variable-font weight samples, and that baseline metrics are preserved. Body and form text retain their existing font character coverage. Keep generated files with their related source changes.
+
+When replacing a photograph, regenerate its existing WebP sizes and update the corresponding `srcSet`, `sizes`, width, and height attributes so the browser selects the correct asset without changing the crop or layout.
 
 ## Building and hosting
 
