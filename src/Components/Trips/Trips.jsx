@@ -1,10 +1,10 @@
 import './Trips.css';
 import img1 from '../../Assets/images1.jpg';
-import img2 from '../../Assets/images2.jpg';
+import img2 from '../../Assets/images2.webp';
 import img3 from '../../Assets/images3.webp';
-import img4 from '../../Assets/images4.jpg';
-import img5 from '../../Assets/images5.jpg';
-import img6 from '../../Assets/images6.jpg';
+import img4 from '../../Assets/images4.webp';
+import img5 from '../../Assets/images5.webp';
+import img6 from '../../Assets/images6.webp';
 import img7 from '../../Assets/images7.webp';
 
 function Trips() {
