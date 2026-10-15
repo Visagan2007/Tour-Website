@@ -277,33 +277,40 @@
     animation-delay: 860ms;
 }
 
-#CBB1 {
+#CBB1,
+#contact-whatsapp {
     color: #70CE73;
 }
 
-#CBB2 {
+#CBB2,
+#contact-instagram {
     background: linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
     background-clip: text;
     color: transparent;
 }
 
-#CBB3 {
+#CBB3,
+#contact-facebook {
     color: #1877F2;
 }
 
-#CBB4 {
+#CBB4,
+#contact-youtube {
     color: red;
 }
 
-#CBB5 {
+#CBB5,
+#contact-linkedin {
     color: #447EB6;
 }
 
-#CBB6 {
+#CBB6,
+#contact-twitter-x {
     color: #000000;
 }
 
-#CBB7 {
+#CBB7,
+#contact-discord {
     color: #626AEA;
 }
 

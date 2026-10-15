@@ -26,25 +26,25 @@ function ContactUs() {
 
                 <div className='CB2'>
                     <a href='https://web.whatsapp.com/' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-whatsapp" id='CBB1'></i>
+                        <i aria-hidden="true" className="bi bi-whatsapp" id='contact-whatsapp'></i>
                     </a>
                     <a href='https://www.instagram.com/?hl=en' target='_blank' rel='noopener noreferrer' aria-label='Instagram' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-instagram" id='CBB2'></i>
+                        <i aria-hidden="true" className="bi bi-instagram" id='contact-instagram'></i>
                     </a>
                     <a href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer' aria-label='Facebook' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-facebook" id='CBB3'></i>
+                        <i aria-hidden="true" className="bi bi-facebook" id='contact-facebook'></i>
                     </a>
                     <a href='https://www.youtube.com/' target='_blank' rel='noopener noreferrer' aria-label='YouTube' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-youtube" id='CBB4'></i>
+                        <i aria-hidden="true" className="bi bi-youtube" id='contact-youtube'></i>
                     </a>
                     <a href='https://in.linkedin.com/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-linkedin" id='CBB5'></i>
+                        <i aria-hidden="true" className="bi bi-linkedin" id='contact-linkedin'></i>
                     </a>
                     <a href='https://x.com/' target='_blank' rel='noopener noreferrer' aria-label='X' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-twitter-x" id='CBB6'></i>
+                        <i aria-hidden="true" className="bi bi-twitter-x" id='contact-twitter-x'></i>
                     </a>
                     <a href='https://discord.com/channels/@me' target='_blank' rel='noopener noreferrer' aria-label='Discord' className='social-icon'>
-                        <i aria-hidden="true" className="bi bi-discord" id='CBB7'></i>
+                        <i aria-hidden="true" className="bi bi-discord" id='contact-discord'></i>
                     </a>
                 </div>
             </div>

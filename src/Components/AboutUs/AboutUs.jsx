@@ -60,6 +60,11 @@ function AboutUs() {
 
     useEffect(() => {
         const targets = revealRefs.current;
+        if (typeof window.IntersectionObserver !== 'function') {
+            targets.forEach((el) => el.classList.add('is-visible'));
+            return;
+        }
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {

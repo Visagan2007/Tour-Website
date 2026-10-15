@@ -213,3 +213,67 @@ test('robots.txt is served as crawler instructions rather than SPA HTML', async 
   expect(instructions).toMatch(/^Allow:\s*\/\s*$/m);
   expect(instructions).not.toMatch(/<html|<!doctype/i);
 });
+
+test('about content remains visible when IntersectionObserver is unavailable', async ({ page }) => {
+  const runtimeErrors = [];
+  page.on('pageerror', (error) => runtimeErrors.push(error.message));
+  await page.addInitScript(() => {
+    window.IntersectionObserver = undefined;
+  });
+
+  await page.goto('/aboutus');
+  await expect(page.getByRole('heading', { name: 'Our Story', exact: true })).toBeVisible();
+  await expect(page.locator('.section-lead')).toContainText('Thendral Tours began with a simple idea');
+  const revealedContent = page.locator('.about-page .reveal');
+  await expect(revealedContent).toHaveCount(7);
+  for (const element of await revealedContent.all()) {
+    await expect(element).toHaveClass(/is-visible/);
+    await expect(element).toHaveCSS('opacity', '1');
+    await expect(element).toBeVisible();
+  }
+  expect(runtimeErrors).toEqual([]);
+});
+
+test('contact has unique IDs while both social rows retain their original icon styles', async ({ page }) => {
+  await page.goto('/contact');
+  await expect(page.getByRole('heading', { name: 'Enquire now', exact: true })).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+  const duplicateIds = await page.locator('[id]').evaluateAll((elements) => {
+    const ids = elements.map((element) => element.id);
+    return ids.filter((id, index) => ids.indexOf(id) !== index);
+  });
+  expect(duplicateIds).toEqual([]);
+
+  const colors = [
+    'rgb(112, 206, 115)', 'rgba(0, 0, 0, 0)', 'rgb(24, 119, 242)', 'rgb(255, 0, 0)',
+    'rgb(68, 126, 182)', 'rgb(0, 0, 0)', 'rgb(98, 106, 234)',
+  ];
+  const instagramGradient = 'linear-gradient(45deg, rgb(254, 218, 117), rgb(250, 126, 30), rgb(214, 41, 118), rgb(150, 47, 191), rgb(79, 91, 213))';
+  const rows = [
+    { selector: '.CB2 a', circleSize: '40px', fontSize: '18px', hoverFontSize: '22px' },
+    { selector: '.social-row a', circleSize: '44px', fontSize: '16.8px', hoverFontSize: '16.8px' },
+  ];
+
+  for (const row of rows) {
+    const links = page.locator(row.selector);
+    await expect(links).toHaveCount(7);
+    for (let index = 0; index < 7; index += 1) {
+      const link = links.nth(index);
+      const icon = link.locator('i');
+      const assertIconStyle = async (fontSize) => {
+        await expect(icon).toHaveCSS('color', colors[index]);
+        await expect(icon).toHaveCSS('background-image', index === 1 ? instagramGradient : 'none');
+        await expect(icon).toHaveCSS('background-clip', index === 1 ? 'text' : 'border-box');
+        await expect(icon).toHaveCSS('font-size', fontSize);
+        await expect(link).toHaveCSS('width', row.circleSize);
+        await expect(link).toHaveCSS('height', row.circleSize);
+        expect(await icon.evaluate((element) => getComputedStyle(element, '::before').fontFamily)).toBe('bootstrap-icons');
+      };
+
+      await page.mouse.move(0, 0);
+      await assertIconStyle(row.fontSize);
+      await link.hover();
+      await assertIconStyle(row.hoverFontSize);
+    }
+  }
+});
